@@ -1,0 +1,22 @@
+[Unit]
+Description=SMP AFK Client (Minecraft coklu bot)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# KURULUM: bu dosyayi /etc/systemd/system/afk.service olarak kopyala
+# ve WorkingDirectory + User alanlarini kendi VDS'ne gore duzenle.
+WorkingDirectory=/home/ubuntu/afk-client
+ExecStart=/usr/bin/node --max-old-space-size=256 --optimize-for-size /home/ubuntu/afk-client/afk.js --tekrar
+Restart=always
+RestartSec=10
+User=ubuntu
+# Düşük RAM VDS için kaynak tavanı (397MB RAM + %50 CPU)
+MemoryMax=400M
+CPUQuota=50%
+StandardOutput=append:/home/ubuntu/afk-client/logs/systemd.log
+StandardError=append:/home/ubuntu/afk-client/logs/systemd.log
+
+[Install]
+WantedBy=multi-user.target

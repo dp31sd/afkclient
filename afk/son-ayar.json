@@ -1,0 +1,19 @@
+{
+  "host": "oyna.chickennw.com",
+  "port": "25565",
+  "version": "",
+  "isimler": [],
+  "sifre": "",
+  "girisKomutlari": [],
+  "lobbyDonus": [
+    "/smp",
+    "/warp afk"
+  ],
+  "webPort": 3000,
+  "panelSifre": "",
+  "panelIzinliIP": [
+    "78.163.160.92"
+  ],
+  "discordWebhook": "",
+  "antiAfk": true
+}

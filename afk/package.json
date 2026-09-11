@@ -1,0 +1,10 @@
+{
+  "name": "smp-afk-client",
+  "version": "1.0.0",
+  "description": "Minecraft SMP (crack/offline) çoklu AFK bot - ortak sohbet ekranı",
+  "main": "afk.js",
+  "license": "MIT",
+  "dependencies": {
+    "mineflayer": "^4.24.0"
+  }
+}
